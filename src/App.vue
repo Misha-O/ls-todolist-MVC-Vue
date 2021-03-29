@@ -1,28 +1,37 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+    .container
+        router-view
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Todo from "@/components/Todo";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    name: "App",
+    components: { Todo },
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    background: #f5f5f5;
+}
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+    }
+}
+* {
+    box-sizing: border-box;
 }
 </style>
